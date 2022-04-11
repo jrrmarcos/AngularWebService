@@ -24,7 +24,7 @@ export class AtualizarComponent implements OnInit {
   alterar() {
     this.web.alterarProduto(this.produtoAlterar).subscribe(res => {
       if (res.ok == true) {
-        alert('Exclusão realizada!')
+        alert('Produto atualizado com sucesso!')
       } else {
         alert('Ocorreu um erro!')
       }
