@@ -11,12 +11,40 @@ export class ListarComponent implements OnInit {
 
   listaProdutos: Produto[] = [];
 
-  constructor(private web : WebService) { }
+  produtoDeletar: Produto = {
+    _id: "",
+    title: "",
+    description: "",
+    price: 0.0,
+    createdAt: "",
+    updatedAt: "",
+    __v: 0
+  }
 
-  carregarProdutos() : void {
+  produtoAlterar: Produto = {
+    _id: "",
+    title: "",
+    description: "",
+    price: 0.0,
+    createdAt: "",
+    updatedAt: "",
+    __v: 0
+  }
+
+  constructor(private web: WebService) { }
+
+  carregarProdutos(): void {
     this.web.getProdutos().subscribe(res => {
       this.listaProdutos = res;
     });
+  }
+
+  selecionaDeletarProduto(produto: Produto) {
+    this.produtoDeletar = produto;
+  }
+
+  selecionaAlterarProduto(produto: Produto) {
+    this.produtoAlterar = produto;
   }
 
   ngOnInit(): void {

@@ -1,0 +1,22 @@
+<div *ngIf="produtoSelecionado">
+    <h2>Confirmar Exclusão</h2>
+
+    <label>Título:<br/>
+        <input [(ngModel)]="produtoSelecionado.title" placeholder="Título" disabled>
+    </label>
+
+    <br/>
+    <label>Preço:<br/>
+        <input [(ngModel)]="produtoSelecionado.price" placeholder="Preço" disabled>
+    </label>
+
+    <br/>
+    <label>Descrição:<br/>
+        <textarea [(ngModel)]="produtoSelecionado.description" placeholder="Descrição" disabled></textarea>
+    </label>
+
+    <br/>
+    <button (click)="recarregar()">Cancelar</button>
+    <button (click)="deletar()">Confirmar</button>
+
+</div>

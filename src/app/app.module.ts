@@ -7,12 +7,16 @@ import { ListarComponent } from './listar/listar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CadastrarComponent } from './cadastrar/cadastrar.component'
 import { FormsModule } from '@angular/forms';
+import { DeletarComponent } from './deletar/deletar.component';
+import { AtualizarComponent } from './atualizar/atualizar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListarComponent,
-    CadastrarComponent
+    CadastrarComponent,
+    DeletarComponent,
+    AtualizarComponent
   ],
   imports: [
     BrowserModule,

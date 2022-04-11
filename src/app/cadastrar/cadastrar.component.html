@@ -1,15 +1,21 @@
 <div>
-    <label> Título
-        <input [(ngModel)] = "produto.title" placeholder="Título">
-    </label>
+    <h2>Cadastrar Novo Produto</h2>
 
-    <label> Preço
-        <input [(ngModel)] = "produto.price" placeholder="Preço">
-    </label>
-
-    <label> Descrição
-        <textarea [(ngModel)] = "produto.description" placeholder="Descrição"></textarea>
-    </label>
-
-    <button (click)="cadastrar()">Cadastro de produto</button>
+    <div class="forms">
+        <label>Título:<br/>
+            <input [(ngModel)]="produto.title" placeholder="Título">
+        </label>
+        
+        <br/>
+        <label>Preço:<br/>
+            <input [(ngModel)]="produto.price" placeholder="Preço">
+        </label>
+        
+        <br/>
+        <label>Descrição:<br/>
+            <textarea [(ngModel)]="produto.description" placeholder="Descrição"></textarea>
+        </label>
+        <br/>
+        <button (click)="cadastrar()">Cadastro de produto</button>
+    </div>
 </div>

@@ -1,0 +1,22 @@
+<div *ngIf="produtoAlterar">
+    <h2>Atualizar Dados do Produto</h2>
+
+    <label>Título:<br/>
+        <input [(ngModel)]="produtoAlterar.title" placeholder="Título">
+    </label>
+
+    <br/>
+    <label>Preço:<br/>
+        <input [(ngModel)]="produtoAlterar.price" placeholder="Preço">
+    </label>
+
+    <br/>
+    <label>Descrição:<br/>
+        <textarea [(ngModel)]="produtoAlterar.description" placeholder="Descrição"></textarea>
+    </label>
+
+    <br/>
+    <button (click)="recarregar()">Cancelar</button>
+    <button (click)="alterar()">Confirmar</button>
+
+</div>
