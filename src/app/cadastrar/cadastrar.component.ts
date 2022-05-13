@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Produto } from '../Produto';
 import { WebService } from '../web.service';
 
 @Component({
@@ -8,18 +9,21 @@ import { WebService } from '../web.service';
 })
 export class CadastrarComponent implements OnInit {
 
+  listaProdutos: Produto[] = [];
+
   produto = {
     title: "",
     price: 0,
-    description:""
+    description: ""
   }
 
-  constructor(private web : WebService) { }
+  constructor(private web: WebService) { }
 
   cadastrar() {
     this.web.cadastrarProduto(this.produto).subscribe(res => {
-      if(res.ok == true) {
+      if (res.ok == true) {
         alert("Cadastro realizado com sucesso!")
+        location.reload()
       } else {
         alert("Erro!")
       }
